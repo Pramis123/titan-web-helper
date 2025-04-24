@@ -1,15 +1,24 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar } from '@/components/Layout/Navbar';
 import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
 import { ServicesGrid } from '@/components/sections/ServicesGrid';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { Testimonials } from '@/components/sections/Testimonials';
+import { SocialLinks } from '@/components/SocialLinks';
+import MetaTags from '@/components/MetaTags';
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <MetaTags 
+        title="TitanKlin Cleaning | Premium Cleaning in Los Angeles"
+        description="Transform your space into a sanctuary of peace. Book our expert cleaning services today."
+        canonicalUrl="/"
+      />
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -33,12 +42,14 @@ const Index = () => {
           <p className="font-opensans text-lg mb-8 max-w-2xl mx-auto animate-fade-in">
             Transform your home into a sanctuary of peace and productivity.
           </p>
-          <Button 
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full animate-fade-in"
-          >
-            Book Now
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 rounded-md animate-fade-in font-montserrat font-semibold"
+            >
+              Book Now
+            </Button>
+          </Link>
         </div>
       </section>
       
@@ -46,6 +57,7 @@ const Index = () => {
       <ServicesGrid />
       <WhyChooseUs />
       <Testimonials />
+      <SocialLinks />
       
       <Footer />
     </div>

@@ -1,29 +1,22 @@
+
 import React from 'react';
 import { Navbar } from '@/components/Layout/Navbar';
 import { Footer } from '@/components/Layout/Footer';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
-import { useToast } from '@/components/ui/use-toast';
+import BookingForm from '@/components/BookingForm';
+import { SocialLinks } from '@/components/SocialLinks';
+import MetaTags from '@/components/MetaTags';
 
 const Contact = () => {
-  const { toast } = useToast();
-  
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    
-    toast({
-      title: "Booking Request Sent",
-      description: "We'll contact you shortly to confirm your appointment.",
-    });
-  };
-  
   return (
     <div className="min-h-screen flex flex-col">
+      <MetaTags 
+        title="Book Cleaning in LA | TitanKlin Cleaning"
+        description="Schedule your cleaning service easily via form, WhatsApp, or Instagram DM."
+        canonicalUrl="/contact"
+      />
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -74,7 +67,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-montserrat font-semibold text-lg">Call Us</h3>
-                    <p className="text-gray-700">(123) 456-7890</p>
+                    <p className="text-gray-700">(323) 458-8728</p>
                   </div>
                 </div>
                 
@@ -91,7 +84,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-montserrat font-semibold text-lg">WhatsApp</h3>
                     <p className="text-gray-700">
-                      <a href="https://wa.me/1234567890" className="hover:text-primary">Send us a message</a>
+                      <a href="https://wa.me/13234588728" className="hover:text-primary">Send us a message</a>
                     </p>
                   </div>
                 </div>
@@ -120,6 +113,11 @@ const Contact = () => {
                   <a href="https://www.youtube.com/@TitanKlinCleaning" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
                     <Youtube className="h-6 w-6 text-primary" />
                   </a>
+                  <a href="https://www.tiktok.com/@titanklincleaning" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary">
+                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                    </svg>
+                  </a>
                   <a href="https://wa.me/13234588728" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
                     <Phone className="h-6 w-6 text-primary" />
                   </a>
@@ -134,74 +132,14 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-white rounded-lg shadow-xl p-8">
-                <h2 className="font-montserrat font-bold text-2xl mb-6">Book Your Cleaning</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" required />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" required />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" placeholder="(123) 456-7890" required />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service Needed</Label>
-                    <select 
-                      id="service" 
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      required
-                    >
-                      <option value="">Select a service</option>
-                      <option value="residential">Residential Cleaning</option>
-                      <option value="airbnb">Airbnb Cleaning</option>
-                      <option value="moving">Moving In/Out Cleaning</option>
-                      <option value="construction">Post-Construction Cleaning</option>
-                      <option value="office">Office & Organization</option>
-                      <option value="deep">Deep Cleaning</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="date">Preferred Date</Label>
-                    <Input id="date" type="date" required />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Additional Information</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell us about your space and any specific cleaning needs" 
-                      className="min-h-[120px]" 
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-                    Schedule Cleaning
-                  </Button>
-                  
-                  <p className="text-sm text-gray-500 text-center">
-                    Or contact us directly via <a href="https://wa.me/1234567890" className="text-primary hover:underline">WhatsApp</a>
-                  </p>
-                </form>
-              </div>
+              <BookingForm />
             </motion.div>
           </div>
         </div>
       </section>
+      
+      {/* Instagram Feed Section */}
+      <SocialLinks />
       
       <Footer />
     </div>
