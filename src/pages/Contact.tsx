@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { WhatsApp, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <WhatsApp className="w-6 h-6 text-primary mt-1" />
+                  <Phone className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-montserrat font-semibold text-lg">WhatsApp</h3>
                     <p className="text-gray-700">
@@ -113,7 +113,7 @@ const Contact = () => {
                     <Instagram className="h-6 w-6 text-primary" />
                   </a>
                   <a href="https://wa.me/1234567890" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
-                    <WhatsApp className="h-6 w-6 text-primary" />
+                    <Phone className="h-6 w-6 text-primary" />
                   </a>
                 </div>
               </div>

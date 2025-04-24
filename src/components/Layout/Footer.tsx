@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, Facebook, Phone, Mail, Calendar, WhatsApp } from 'lucide-react';
+import { Instagram, Phone, Mail, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -18,7 +18,7 @@ export const Footer = () => {
                 <Instagram className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <WhatsApp className="h-6 w-6 hover:text-accent transition-colors" />
+                <Phone className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
             </div>
           </div>
@@ -57,7 +57,7 @@ export const Footer = () => {
                 <span>info@titanklin.com</span>
               </a>
               <a href="https://wa.me/1234567890" className="flex items-center space-x-2 hover:text-accent transition-colors">
-                <WhatsApp className="h-5 w-5" />
+                <Phone className="h-5 w-5" />
                 <span>WhatsApp</span>
               </a>
               <Button className="bg-accent hover:bg-accent/90 mt-2 w-full md:w-auto flex items-center justify-center gap-2">
