@@ -3,6 +3,9 @@ import React from 'react';
 import { Navbar } from '@/components/Layout/Navbar';
 import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
+import { ServicesGrid } from '@/components/sections/ServicesGrid';
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
+import { Testimonials } from '@/components/sections/Testimonials';
 
 const Index = () => {
   return (
@@ -38,6 +41,11 @@ const Index = () => {
           </Button>
         </div>
       </section>
+      
+      {/* Add new sections */}
+      <ServicesGrid />
+      <WhyChooseUs />
+      <Testimonials />
       
       <Footer />
     </div>
