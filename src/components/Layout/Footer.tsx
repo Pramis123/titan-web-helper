@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Instagram, Phone, Mail, Calendar } from 'lucide-react';
+import { Instagram, Phone, Mail, Calendar, Facebook, Linkedin, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -14,11 +13,17 @@ export const Footer = () => {
             <p className="font-opensans mb-4">Clean Spaces, Clear Minds.</p>
             <p className="font-opensans mb-6">Serving all of Los Angeles County</p>
             <div className="flex items-center space-x-4">
-              <a href="https://instagram.com/titanklincleaning" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.facebook.com/TitanKlinCleaning/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook className="h-6 w-6 hover:text-accent transition-colors" />
+              </a>
+              <a href="https://www.instagram.com/titanklincleaning/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <Phone className="h-6 w-6 hover:text-accent transition-colors" />
+              <a href="https://www.linkedin.com/company/titanklincleaning/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-6 w-6 hover:text-accent transition-colors" />
+              </a>
+              <a href="https://www.youtube.com/@TitanKlinCleaning" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <Youtube className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
             </div>
           </div>
@@ -48,15 +53,15 @@ export const Footer = () => {
           <div>
             <h4 className="font-montserrat font-bold mb-4">Contact Us</h4>
             <div className="flex flex-col space-y-4">
-              <a href="tel:+1234567890" className="flex items-center space-x-2 hover:text-accent transition-colors">
+              <a href="tel:+13234588728" className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Phone className="h-5 w-5" />
-                <span>(123) 456-7890</span>
+                <span>(323) 458-8728</span>
               </a>
               <a href="mailto:info@titanklin.com" className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Mail className="h-5 w-5" />
                 <span>info@titanklin.com</span>
               </a>
-              <a href="https://wa.me/1234567890" className="flex items-center space-x-2 hover:text-accent transition-colors">
+              <a href="https://wa.me/13234588728" className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Phone className="h-5 w-5" />
                 <span>WhatsApp</span>
               </a>

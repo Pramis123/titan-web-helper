@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar } from '@/components/Layout/Navbar';
 import { Footer } from '@/components/Layout/Footer';
@@ -7,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
@@ -109,10 +108,19 @@ const Contact = () => {
               <div className="pt-8">
                 <h3 className="font-montserrat font-semibold text-xl mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="https://instagram.com/titanklincleaning" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                  <a href="https://www.facebook.com/TitanKlinCleaning/" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                    <Facebook className="h-6 w-6 text-primary" />
+                  </a>
+                  <a href="https://www.instagram.com/titanklincleaning/" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
                     <Instagram className="h-6 w-6 text-primary" />
                   </a>
-                  <a href="https://wa.me/1234567890" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                  <a href="https://www.linkedin.com/company/titanklincleaning/" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                    <Linkedin className="h-6 w-6 text-primary" />
+                  </a>
+                  <a href="https://www.youtube.com/@TitanKlinCleaning" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                    <Youtube className="h-6 w-6 text-primary" />
+                  </a>
+                  <a href="https://wa.me/13234588728" target="_blank" rel="noopener noreferrer" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
                     <Phone className="h-6 w-6 text-primary" />
                   </a>
                 </div>
