@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Home, Briefcase, Building, Tools, Calendar, Sparkles } from 'lucide-react';
+import { Home, Briefcase, Building, Wrench, Calendar, Sparkles } from 'lucide-react';
 
 const services = [
   {
@@ -23,7 +22,7 @@ const services = [
   {
     title: "Post-Construction",
     description: "Detailed cleaning to remove dust and debris after renovations",
-    icon: Tools
+    icon: Wrench
   },
   {
     title: "Office & Organization",
