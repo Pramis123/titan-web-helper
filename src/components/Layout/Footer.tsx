@@ -1,37 +1,53 @@
 
 import React from 'react';
-import { Instagram, Facebook, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, Phone, Mail, Calendar, WhatsApp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 export const Footer = () => {
   return (
-    <footer className="bg-secondary text-white py-12">
+    <footer className="bg-secondary text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-1">
             <h3 className="font-montserrat font-bold text-xl mb-4">TitanKlin Cleaning</h3>
-            <p className="font-opensans">Serving all of Los Angeles, CA</p>
-            <div className="flex items-center mt-4 space-x-4">
-              <a href="https://instagram.com/titanklincleaning" target="_blank" rel="noopener noreferrer">
+            <p className="font-opensans mb-4">Clean Spaces, Clear Minds.</p>
+            <p className="font-opensans mb-6">Serving all of Los Angeles County</p>
+            <div className="flex items-center space-x-4">
+              <a href="https://instagram.com/titanklincleaning" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Facebook className="h-6 w-6 hover:text-accent transition-colors" />
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <WhatsApp className="h-6 w-6 hover:text-accent transition-colors" />
               </a>
             </div>
           </div>
           
           <div>
-            <h4 className="font-montserrat font-bold mb-4">Quick Links</h4>
+            <h4 className="font-montserrat font-bold mb-4">Services</h4>
             <div className="flex flex-col space-y-2">
-              <a href="/about" className="hover:text-accent transition-colors">About Us</a>
-              <a href="/services" className="hover:text-accent transition-colors">Services</a>
-              <a href="/contact" className="hover:text-accent transition-colors">Contact</a>
+              <Link to="/services/residential" className="hover:text-accent transition-colors">Residential Cleaning</Link>
+              <Link to="/services/airbnb" className="hover:text-accent transition-colors">Airbnb Cleaning</Link>
+              <Link to="/services/moving" className="hover:text-accent transition-colors">Moving In/Out</Link>
+              <Link to="/services/construction" className="hover:text-accent transition-colors">Post-Construction</Link>
+              <Link to="/services/office" className="hover:text-accent transition-colors">Office Organization</Link>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-montserrat font-bold mb-4">Company</h4>
+            <div className="flex flex-col space-y-2">
+              <Link to="/about" className="hover:text-accent transition-colors">About Us</Link>
+              <Link to="/testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
+              <Link to="/faq" className="hover:text-accent transition-colors">FAQs</Link>
+              <Link to="/contact" className="hover:text-accent transition-colors">Contact</Link>
+              <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             </div>
           </div>
           
           <div>
             <h4 className="font-montserrat font-bold mb-4">Contact Us</h4>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-4">
               <a href="tel:+1234567890" className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Phone className="h-5 w-5" />
                 <span>(123) 456-7890</span>
@@ -40,12 +56,21 @@ export const Footer = () => {
                 <Mail className="h-5 w-5" />
                 <span>info@titanklin.com</span>
               </a>
+              <a href="https://wa.me/1234567890" className="flex items-center space-x-2 hover:text-accent transition-colors">
+                <WhatsApp className="h-5 w-5" />
+                <span>WhatsApp</span>
+              </a>
+              <Button className="bg-accent hover:bg-accent/90 mt-2 w-full md:w-auto flex items-center justify-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span>Book Now</span>
+              </Button>
             </div>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-white/10 text-center">
+        <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <p className="text-sm">&copy; {new Date().getFullYear()} TitanKlin Cleaning. All rights reserved.</p>
+          <p className="text-xs mt-2 text-white/70">Designed with care for a cleaner Los Angeles</p>
         </div>
       </div>
     </footer>
